@@ -8,7 +8,7 @@ int main(void)
 {
 	char *str;
 
-	str = "Tada! Congrats";
+	str = ("Tada! Congrats");
 	_keygen(str);
 	return (0);
 }

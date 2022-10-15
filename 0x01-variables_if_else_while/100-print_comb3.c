@@ -1,22 +1,32 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - print 01 to 89
+ * main -Entry point
+ * Description - Prints two digit combination
  * Return: zero
  */
 
 int main(void)
 {
-	int i;
+	int c, i;
 
-	for (i = 1; i <= 89; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i == 89)
-			break;
-		putchar(',');
-		putchar(' ');
+		for (i = '0'; i <= '9'; i++)
+		{
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
+
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
 	}
 	putchar('\n');
 	return (0);

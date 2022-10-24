@@ -9,18 +9,27 @@
  */
 int main(void)
 {
-	int pass, sum;
+	int sum, i, r;
+
+	char decode[27] = "abcdefghijklmnopqrstuvwxyz";
+
+	char key[30];
+
+	sum = 0;
+	i = 0;
 
 	srand(time(NULL));
-	sum = 0;
 
-	while (sum <= 2645)
+	while (sum < 2772)
 	{
-		pass = (rand() % 128);
-		sum += pass;
-		printf("%c", pass);
+		r = rand() % 10;
+		key[i] = decode[r];
+		sum += key[i];
+		i++;
 	}
-	printf("%c", 2772 - sum);
-
+	r = 2772 - sum;
+	key[i] = r;
+	printf("%s\n",  key);
 	return (0);
 }
+

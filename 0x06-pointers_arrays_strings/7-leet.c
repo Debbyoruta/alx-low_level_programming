@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- *  leet - changes the chars "aA" "eE" "oO" "tT" "lL" into 4 3 0 7 1 respectively
+ *  leet - Entry point
+ *  Desc: Entry
  *  @s: the pointer containing the string
  *  Return: the string already converted
  */
